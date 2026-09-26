@@ -31,7 +31,7 @@
     "./package.json": "./package.json"
   },
   "bin": {
-    "elsewhere-game": "./bin/elsewhere-game.mjs"
+    "elsewhere-game": "bin/elsewhere-game.mjs"
   },
   "files": [
     "dist",
