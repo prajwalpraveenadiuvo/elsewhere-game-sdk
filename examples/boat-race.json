@@ -1,0 +1,88 @@
+{
+  "spec_version": 1,
+  "kind": "race",
+  "name": "Ember Point Regatta",
+  "description": "One lap round Ember Point: all six buoys in order, clockwise from the south-east, then back over the start line. Any boat counts, the one you built too.",
+  "area": {
+    "center": [0, 0],
+    "radius_m": 240
+  },
+  "join": {
+    "center": [179.2, -31.6],
+    "radius_m": 30
+  },
+  "players": {
+    "min": 1,
+    "max": 8
+  },
+  "mode": "boat",
+  "lobby_s": 20,
+  "countdown_s": 5,
+  "time_limit_s": 300,
+  "course": {
+    "laps": 1,
+    "checkpoints": [
+      {
+        "id": "buoy-1",
+        "kind": "mark",
+        "at": [146.1, 102.6],
+        "radius_m": 16,
+        "label": "Buoy 1"
+      },
+      {
+        "id": "buoy-2",
+        "kind": "mark",
+        "at": [-16.5, 186.3],
+        "radius_m": 16,
+        "label": "Buoy 2"
+      },
+      {
+        "id": "buoy-3",
+        "kind": "mark",
+        "at": [-166, 77.1],
+        "radius_m": 16,
+        "label": "Buoy 3"
+      },
+      {
+        "id": "buoy-4",
+        "kind": "mark",
+        "at": [-145.3, -102],
+        "radius_m": 16,
+        "label": "Buoy 4"
+      },
+      {
+        "id": "buoy-5",
+        "kind": "mark",
+        "at": [16.5, -185.8],
+        "radius_m": 16,
+        "label": "Buoy 5"
+      },
+      {
+        "id": "buoy-6",
+        "kind": "mark",
+        "at": [165.5, -76.9],
+        "radius_m": 16,
+        "label": "Buoy 6"
+      },
+      {
+        "id": "finish",
+        "kind": "line",
+        "a": [149.4, 13.1],
+        "b": [211.2, 18.5],
+        "label": "Finish"
+      }
+    ]
+  },
+  "scoring": {
+    "key": "score",
+    "places": [30, 20, 10],
+    "finish": 5
+  },
+  "overlays": [
+    {
+      "kind": "label",
+      "at": [-205, -12],
+      "text": "Halfway · island to starboard"
+    }
+  ]
+}

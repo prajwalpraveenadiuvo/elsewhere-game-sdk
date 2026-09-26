@@ -1,0 +1,64 @@
+{
+  "name": "@elsewhereprotocol/game-sdk",
+  "version": "0.1.0",
+  "description": "Build mini-games that run inside Elsewhere: a declarative game spec, its validator, the match engine the world runs, a local harness and a CLI.",
+  "license": "Apache-2.0",
+  "author": "Elsewhere",
+  "keywords": [
+    "elsewhere",
+    "game-sdk",
+    "multiplayer",
+    "race",
+    "game-engine",
+    "virtual-world"
+  ],
+  "homepage": "https://github.com/prajwalpraveenadiuvo/elsewhere-game-sdk#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prajwalpraveenadiuvo/elsewhere-game-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prajwalpraveenadiuvo/elsewhere-game-sdk/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "elsewhere-game": "./bin/elsewhere-game.mjs"
+  },
+  "files": [
+    "dist",
+    "src",
+    "bin",
+    "examples",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run clean && npm run build && npm test"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.9"
+  }
+}

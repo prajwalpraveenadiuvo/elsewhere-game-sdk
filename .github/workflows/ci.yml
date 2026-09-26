@@ -1,0 +1,27 @@
+# Runs in the standalone SDK repository (inert inside the Elsewhere monorepo,
+# where only the root .github folder counts).
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npm test
+      - run: node bin/elsewhere-game.mjs validate examples/boat-race.json
+      - run: node bin/elsewhere-game.mjs simulate examples/boat-race.json 3
+      - run: npm pack --dry-run
