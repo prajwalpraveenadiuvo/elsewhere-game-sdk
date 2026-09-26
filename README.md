@@ -13,7 +13,7 @@ npx elsewhere-game simulate my-race.json 4     # race it with four bots
 npx elsewhere-game publish my-race.json --region <region_id>   # put it live
 ```
 
-Node 18 or later. No runtime dependencies.
+Node 20 or later. No runtime dependencies.
 
 Version 1 supports one kind of game: **races**. Players pass checkpoints in
 order, for a set number of laps, on foot, by boat or in any vehicle. The

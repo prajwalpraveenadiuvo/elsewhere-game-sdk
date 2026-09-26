@@ -2,7 +2,7 @@
 
 ## 0.1.0
 
-First release.
+First release. Needs Node 20 or later.
 
 - Game spec v1 with one kind of game, `race`. A race is checkpoints (marks
   and lines) passed in order for a number of laps, by boat, vehicle, on foot
